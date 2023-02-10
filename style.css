@@ -1,0 +1,83 @@
+.container {
+    width: 1440px;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    margin: auto;
+    align-content: center;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 375px;
+    }
+}
+.layout {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.layout .image-box  {
+    
+    width: 300px;
+}
+.layout .image-box img {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.layout .info-box {
+    width: 300px;
+    padding: 25px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 10px 10px 0;
+}
+.layout .info-box h1 {
+    color: hsl(212, 21%, 14%);
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.layout .info-box h2 {
+    font-size: 35px;
+}
+.layout .info-box p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+.layout .info-box .price {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    align-content: center;
+   
+}
+.layout .info-box .price .p1 {
+    font-size: 25px;
+    color:  hsl(158, 36%, 37%);
+    font-weight: 900;
+    margin-right: 25px;
+}
+.layout .info-box .price .p2 {
+    font-size: 15px;
+    color:  hsl(212, 21%, 14%);
+    text-decoration: line-through;
+    
+}
+.layout .info-box .button {
+    text-align: center;
+    width: 100%;
+
+}
+.layout .info-box .button span {
+    background-color: hsl(158, 36%, 37%) ;
+    color: hsl(0, 0%, 100%);
+    padding: 5px 30px;
+    border-radius: 6px;
+}
+
+.attribution {
+    margin-top: 20px;
+    text-align: center;
+}
