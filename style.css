@@ -1,83 +1,135 @@
-.container {
-    width: 1440px;
-    height: 100vh;
-    background-color: hsl(30, 38%, 92%);
-    margin: auto;
-    align-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+* {
+    box-sizing: border-box;
 }
-@media (max-width: 767px) {
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    height: 100vh;
+    background-color:hsl(30, 38%, 92%) ;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@media (max-width:767px){
     .container {
-        width: 375px;
+        align-items: normal;
     }
 }
 .layout {
-    position: absolute;
-    width: 800px;
-    display: flex;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    width: 42%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    border-radius: 10px;    
+}
+@media (max-width:767px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 42%;
+        width: 100%;
+        height: 90%;
+        background-color: white;
+        border-radius: 10px;    
+    }
 }
 .layout .image-box  {
-    
-    width: 300px;
-}
-.layout .image-box img {
-    width: 100%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 10px 0 0 10px;
+    
+}
+@media (max-width:767px){
+    .layout .image-box{
+        background-image: url(images/image-product-mobile.jpg);
+        border-radius: 10px 10px 0 0;
+    }
 }
 .layout .info-box {
-    width: 300px;
-    padding: 25px;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 40px;
 }
 .layout .info-box h1 {
-    color: hsl(212, 21%, 14%);
-    letter-spacing: 0.1em;
+    font-family:  "Montserrat";
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 4px;
     opacity: 0.5;
-    font-size: 14px;
-    font-weight: 500;
-
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+@media (max-width:767px) {
+    .layout .info-box h1 {
+        font-size: 13px;
+        font-weight: 100;
+        color: hsl(228, 12%, 48%);
+        margin-bottom: 15px;
+    }
+}
+@media (max-width:767px) {
+    .layout .info-box h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
 }
 .layout .info-box h2 {
+    font-family: "Fraunces";
     font-size: 35px;
+    margin: 0 auto;
 }
 .layout .info-box p {
+    font-family:  "Montserrat";
+    color: hsl(228, 12%, 48%);
     font-size: 14px;
-    line-height: 1.8;
+    line-height: 30px;
+    text-justify:distribute-all-lines;
 }
 .layout .info-box .price {
-    margin-top: 25px;
-    margin-bottom: 35px;
+    display: flex;
+    margin-bottom: 20px;
     align-content: center;
    
 }
 .layout .info-box .price .p1 {
-    font-size: 25px;
+    font-size: 30px;
     color:  hsl(158, 36%, 37%);
-    font-weight: 900;
+    font-family: "Fraunces";
     margin-right: 25px;
 }
 .layout .info-box .price .p2 {
     font-size: 15px;
-    color:  hsl(212, 21%, 14%);
+    color: hsl(228, 12%, 48%);
     text-decoration: line-through;
-    
+    font-family: "Montserrat";
 }
-.layout .info-box .button {
-    text-align: center;
-    width: 100%;
+.layout .info-box button {
+    font-size: 18px;
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 600;
+    background-color: hsl(158, 36%, 37%);
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.layout .info-box button:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+button img{
+    padding-right: 10px;
+    width: 30px;
+}
 
-}
-.layout .info-box .button span {
-    background-color: hsl(158, 36%, 37%) ;
-    color: hsl(0, 0%, 100%);
-    padding: 5px 30px;
-    border-radius: 6px;
-}
-
-.attribution {
-    margin-top: 20px;
-    text-align: center;
-}
